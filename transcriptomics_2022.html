@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Transcriptomics Workshop</title>
+<meta name="description" content="Transcriptomics workshop" />
+<meta name="keywords" content="RNA-seq, transcriptomics, genomics, workshop, perseus" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+		<meta name="google-site-verification" content="E5KoiP8p_po4nkm3qwJcX9i0bHvy_DYD_-xezfFGsq8" />
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="http://cdn11.editmysite.com/css/sites.css?buildtime=1234" />
+<link rel="stylesheet" type="text/css" href="http://cdn11.editmysite.com/css/old/fancybox.css?buildtime=1234" />
+<link rel="stylesheet" type="text/css" href="files/main_style.css?1782778937" title="wsite-theme-css" />
+<link href='http://cdn2.editmysite.com/fonts/Open_Sans/font.css?2' rel='stylesheet' type='text/css' />
+
+<style type='text/css'>
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+@media screen and (min-width: 767px) {.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+#wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-content .wsite-form-field label, #wsite-content .wsite-form-field label, .blog-sidebar div.paragraph, .blog-sidebar p, .blog-sidebar .wsite-form-field label, .blog-sidebar .wsite-form-field label {}
+.wsite-elements.wsite-footer div.paragraph, .wsite-elements.wsite-footer p, .wsite-elements.wsite-footer .product-block .product-title, .wsite-elements.wsite-footer .product-description, .wsite-elements.wsite-footer .wsite-form-field label, .wsite-elements.wsite-footer .wsite-form-field label{}
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title, #wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+#wsite-content h2, #wsite-content .product-long .product-title, #wsite-content .product-large .product-title, #wsite-content .product-small .product-title, .blog-sidebar h2 {}
+.wsite-elements.wsite-footer h2, .wsite-elements.wsite-footer .product-long .product-title, .wsite-elements.wsite-footer .product-large .product-title, .wsite-elements.wsite-footer .product-small .product-title{}
+#wsite-title {}
+.wsite-menu-default a {}
+.wsite-menu a {}
+.wsite-image div, .wsite-caption {}
+.galleryCaptionInnerText {}
+.fancybox-title {}
+.wslide-caption-text {}
+.wsite-phone {}
+.wsite-headline,.wsite-header-section .wsite-content-title {}
+.wsite-headline-paragraph,.wsite-header-section .paragraph {}
+.wsite-button-inner {}
+.wsite-not-footer blockquote {}
+.wsite-footer blockquote {}
+.blog-header h2 a {}
+#wsite-content h2.wsite-product-title {}
+.wsite-product .wsite-product-price a {}
+}</style>
+<style>
+.wsite-background {background-image: url("/uploads/3/0/6/0/30609211/background-images/207449747.jpg") !important;background-repeat: no-repeat !important;background-position: 50% 50% !important;background-size: 100% !important;background-color: transparent !important;background: inherit;}
+body.wsite-background {background-attachment: fixed !important;}.wsite-background.wsite-custom-background{ background-size: cover !important}
+</style><link rel='stylesheet' type='text/css' href='http://cdn11.editmysite.com/css/old/slideshow/slideshow.css?buildtime=1234' />
+
+		<script src='files/templateArtifacts.js?1782373908'></script>
+<script>
+var STATIC_BASE = '//cdn1.editmysite.com/';
+var ASSETS_BASE = '//cdn11.editmysite.com/';
+var STYLE_PREFIX = 'wsite';
+</script>
+<script src='https://cdn11.editmysite.com/js/jquery-1.8.3.min.js'></script>
+
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script>
+<script src="http://cdn11.editmysite.com/js/site/main.js?buildtime=1234"></script><script type="text/javascript">
+		function initCustomerAccountsModels() {
+					(function(){_W.setup_rpc({"url":"\/ajax\/api\/JsonRPC\/CustomerAccounts\/","actions":{"CustomerAccounts":[{"name":"login","len":2,"multiple":false,"standalone":false},{"name":"logout","len":0,"multiple":false,"standalone":false},{"name":"getSessionDetails","len":0,"multiple":false,"standalone":false},{"name":"getAccountDetails","len":0,"multiple":false,"standalone":false},{"name":"getOrders","len":0,"multiple":false,"standalone":false},{"name":"register","len":4,"multiple":false,"standalone":false},{"name":"emailExists","len":1,"multiple":false,"standalone":false},{"name":"passwordReset","len":1,"multiple":false,"standalone":false},{"name":"passwordUpdate","len":3,"multiple":false,"standalone":false},{"name":"validateSession","len":1,"multiple":false,"standalone":false}]},"namespace":"_W.CustomerAccounts.RPC"});
+_W.setup_model_rpc({"rpc_namespace":"_W.CustomerAccounts.RPC","model_namespace":"_W.CustomerAccounts.BackboneModelData","collection_namespace":"_W.CustomerAccounts.BackboneCollectionData","bootstrap_namespace":"_W.CustomerAccounts.BackboneBootstrap","models":{"CustomerAccounts":{"_class":"CustomerAccounts.Model.CustomerAccounts","defaults":null,"validation":null,"types":null,"idAttribute":null,"keydefs":null}},"collections":{"CustomerAccounts":{"_class":"CustomerAccounts.Collection.CustomerAccounts"}},"bootstrap":[]});
+})();
+		}
+		if(document.createEvent && document.addEventListener) {
+			var initEvt = document.createEvent('Event');
+			initEvt.initEvent('customerAccountsModelsInitialized', true, false);
+			document.dispatchEvent(initEvt);
+		} else if(document.documentElement.initCustomerAccountsModels === 0){
+			document.documentElement.initCustomerAccountsModels++
+		}
+		</script>
+		<script type="text/javascript"> _W = _W || {}; _W.securePrefix='UNSET'; </script><script>_W = _W || {};
+			_W.customerLocale = "en_US";
+			_W.storeName = null;
+			_W.isCheckoutReskin = false;
+			_W.storeCountry = "MY";
+			_W.storeCurrency = "MYR";
+			_W.storeEuPrivacyPolicyUrl = "";
+			com_currentSite = "748301850650509034";
+			com_userID = "30609211";</script><script type='text/javascript' src='http://cdn11.editmysite.com/js/old/slideshow-jq.js?buildtime=1234'></script>
+<script type="text/javascript">_W.configDomain = "";</script><script>_W.relinquish && _W.relinquish()</script>
+<script type="text/javascript" src="http://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1234&"></script><script> _W.themePlugins = [];</script><script type="text/javascript"> _W.recaptchaUrl = "https://www.google.com/recaptcha/api.js"; </script><script type="text/javascript"><!--
+	var IS_ARCHIVE = 1;
+	
+	function initFlyouts(){
+		initPublishedFlyoutMenus(
+			[{"id":"494725241343117497","title":"Home","url":"index.html","target":"","nav_menu":false,"nonclickable":false},{"id":"988512084342722281","title":"Research","url":"research.html","target":"","nav_menu":false,"nonclickable":false},{"id":"220584492250286700","title":"People","url":"people.html","target":"","nav_menu":false,"nonclickable":false},{"id":"537161131243030182","title":"Workshop","url":"workshop.html","target":"","nav_menu":false,"nonclickable":false},{"id":"252194056401789755","title":"Publication","url":"publication.html","target":"","nav_menu":false,"nonclickable":false},{"id":"547261871767648895","title":"Outreach","url":"outreach.html","target":"","nav_menu":false,"nonclickable":false},{"id":"542272696757768165","title":"Activities","url":"activities.html","target":"","nav_menu":false,"nonclickable":false},{"id":"623541862521797971","title":"Resources","url":"resources.html","target":"","nav_menu":false,"nonclickable":false},{"id":"374689927854575672","title":"Facility","url":"facility.html","target":"","nav_menu":false,"nonclickable":false},{"id":"358588731189045096","title":"Professional","url":"professional.html","target":"","nav_menu":false,"nonclickable":false},{"id":"146442324841575138","title":"Network","url":"network.html","target":"","nav_menu":false,"nonclickable":false}],
+			"634971543390832580",
+			'',
+			'active',
+			false,
+			{"navigation\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}} class=\"wsite-menu-item-wrap\">\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\t{{#membership_required}}\n\t\t\tdata-membership-required=\"{{.}}\"\n\t\t{{\/membership_required}}\n\t\tclass=\"wsite-menu-item\"\n\t\t>\n\t\t{{{title_html}}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n","navigation\/flyout\/list":"<div class=\"wsite-menu-wrap\" style=\"display:none\">\n\t<ul class=\"wsite-menu\">\n\t\t{{#children}}{{> navigation\/flyout\/item}}{{\/children}}\n\t<\/ul>\n<\/div>\n","navigation\/flyout\/item":"<li {{#id}}id=\"{{id}}\"{{\/id}}\n\tclass=\"wsite-menu-subitem-wrap {{#is_current}}wsite-nav-current{{\/is_current}}\"\n\t>\n\t<a\n\t\t{{^nonclickable}}\n\t\t\t{{^nav_menu}}\n\t\t\t\thref=\"{{url}}\"\n\t\t\t{{\/nav_menu}}\n\t\t{{\/nonclickable}}\n\t\t{{#target}}\n\t\t\ttarget=\"{{target}}\"\n\t\t{{\/target}}\n\t\tclass=\"wsite-menu-subitem\"\n\t\t>\n\t\t<span class=\"wsite-menu-title\">\n\t\t\t{{{title_html}}}\n\t\t<\/span>{{#has_children}}<span class=\"wsite-menu-arrow\">&gt;<\/span>{{\/has_children}}\n\t<\/a>\n\t{{#has_children}}{{> navigation\/flyout\/list}}{{\/has_children}}\n<\/li>\n"},
+			{}
+		)
+	}
+//-->
+</script>
+		
+		
+	</head>
+	<body class="no-header-page  wsite-theme-light  wsite-page-transcriptomics_2022"><div id="header-wrap">
+        <div class="container">
+            <table id="header">
+                <tr>
+                    <td id="logo"><span class="wsite-logo">
+
+	
+	<span class="wsite-title-placeholder">&nbsp;</span><span style="display:none">
+	<span style="display:none">INBIOSIS PLANT FUNCTIONAL GENOMICS RESEARCH GROUP</span>
+	</span>
+	
+
+</span></td>                    
+					<td class="nav"><ul class="wsite-menu-default">
+		<li id="pg494725241343117497" class="wsite-menu-item-wrap">
+			<a
+						href="index.html"
+				class="wsite-menu-item"
+				>
+				Home
+			</a>
+			
+		</li>
+		<li id="pg988512084342722281" class="wsite-menu-item-wrap">
+			<a
+						href="research.html"
+				class="wsite-menu-item"
+				>
+				Research
+			</a>
+			<div class="wsite-menu-wrap" style="display:none">
+	<ul class="wsite-menu">
+		<li id="wsite-nav-339281495631948312"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="nepenthes.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Nepenthes
+		</span><span class="wsite-menu-arrow">&gt;</span>
+	</a>
+	<div class="wsite-menu-wrap" style="display:none">
+	<ul class="wsite-menu">
+		<li id="wsite-nav-665439072690233326"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="metabolomics.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Metabolomics
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-196589315942652670"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="proteomics.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Proteomics
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-488307889747564381"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="transcriptomics.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Transcriptomics
+		</span>
+	</a>
+	
+</li>
+
+	</ul>
+</div>
+
+</li>
+<li id="wsite-nav-121146567621975979"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="garcinia.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Garcinia
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-608895584275223632"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="carica.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Carica
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-430644076490453706"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="rafflesia.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Rafflesia
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-557924783478775604"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="polygonum.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Polygonum
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-358552499979947925"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="saccharomyces.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Saccharomyces
+		</span>
+	</a>
+	
+</li>
+
+	</ul>
+</div>
+
+		</li>
+		<li id="pg220584492250286700" class="wsite-menu-item-wrap">
+			<a
+						href="people.html"
+				class="wsite-menu-item"
+				>
+				People
+			</a>
+			
+		</li>
+		<li id="pg537161131243030182" class="wsite-menu-item-wrap">
+			<a
+						href="workshop.html"
+				class="wsite-menu-item"
+				>
+				Workshop
+			</a>
+			<div class="wsite-menu-wrap" style="display:none">
+	<ul class="wsite-menu">
+		<li id="wsite-nav-849217300365611166"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="transcriptomics_2026.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Transcriptomics 2026
+		</span><span class="wsite-menu-arrow">&gt;</span>
+	</a>
+	<div class="wsite-menu-wrap" style="display:none">
+	<ul class="wsite-menu">
+		<li id="wsite-nav-762706606315573731"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="transcriptomics_2025.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Transcriptomics 2025
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-552900319674589784"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="transcriptomics_2024.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Transcriptomics 2024
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-878869109345022304"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="transcriptomics_2023.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Transcriptomics 2023
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-634971543390832580"
+	class="wsite-menu-subitem-wrap wsite-nav-current"
+	>
+	<a
+				href="transcriptomics_2022.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			Transcriptomics 2022
+		</span>
+	</a>
+	
+</li>
+
+	</ul>
+</div>
+
+</li>
+<li id="wsite-nav-203045999889719916"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="qpcr.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			qPCR
+		</span>
+	</a>
+	
+</li>
+<li id="wsite-nav-534724647147913691"
+	class="wsite-menu-subitem-wrap "
+	>
+	<a
+				href="qpcr_2022-947660.html"
+		class="wsite-menu-subitem"
+		>
+		<span class="wsite-menu-title">
+			CPD
+		</span>
+	</a>
+	
+</li>
+
+	</ul>
+</div>
+
+		</li>
+		<li id="pg252194056401789755" class="wsite-menu-item-wrap">
+			<a
+						href="publication.html"
+				class="wsite-menu-item"
+				>
+				Publication
+			</a>
+			
+		</li>
+		<li id="pg547261871767648895" class="wsite-menu-item-wrap">
+			<a
+						href="outreach.html"
+				class="wsite-menu-item"
+				>
+				Outreach
+			</a>
+			
+		</li>
+		<li id="pg542272696757768165" class="wsite-menu-item-wrap">
+			<a
+						href="activities.html"
+				class="wsite-menu-item"
+				>
+				Activities
+			</a>
+			
+		</li>
+		<li id="pg623541862521797971" class="wsite-menu-item-wrap">
+			<a
+						href="resources.html"
+				class="wsite-menu-item"
+				>
+				Resources
+			</a>
+			
+		</li>
+		<li id="pg374689927854575672" class="wsite-menu-item-wrap">
+			<a
+						href="facility.html"
+				class="wsite-menu-item"
+				>
+				Facility
+			</a>
+			
+		</li>
+		<li id="pg358588731189045096" class="wsite-menu-item-wrap">
+			<a
+						href="professional.html"
+				class="wsite-menu-item"
+				>
+				Professional
+			</a>
+			
+		</li>
+		<li id="pg146442324841575138" class="wsite-menu-item-wrap">
+			<a
+						href="network.html"
+				class="wsite-menu-item"
+				>
+				Network
+			</a>
+			
+		</li>
+</ul>
+</td>
+					<!--<td class="search">{search}</td>-->
+				</tr>
+            </table>
+			
+			<div class="banner-wrap">
+				<div id="banner">
+					<h2></h2>
+					<p></p>	
+						
+				</div>
+			</div>
+			
+        </div><!-- end container -->
+    </div><!-- end header-wrap --> 
+
+ 
+
+
+    <div id="main-wrap">
+        <div class="container">
+   			<div id="wsite-content" class="wsite-elements wsite-not-footer">
+	<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='https://photos.google.com/share/AF1QipO_cXQZXImfM6_QGnnJicpGVUJgfWed7XbD6VKmJsBOQc-Gpip3Z7odY4QlmowXpw?key=UlBBS2VnNm1rcnhFNVMwTDMzRV9kY1hCNzN4ZTdR' target='_blank'>
+<img src="uploads/3/0/6/0/30609211/transcriptomics-header_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="wsite-spacer" style="height:102px;"></div>
+
+<h2 class="wsite-content-title" style="text-align:center;"><font size="6">Thanks for Participating in our workshop!!!</font></h2>
+
+<div><div style="height:20px;overflow:hidden"></div>
+<div id='175666554434214295-slideshow'></div>
+<script type='text/javascript'>
+(function(jQuery) {
+function init() { window.wSlideshow && window.wSlideshow.render({elementID:"175666554434214295",nav:"thumbnails",navLocation:"bottom",captionLocation:"bottom",transition:"fade",autoplay:"0",speed:"5",aspectRatio:"auto",showControls:"true",randomStart:"false",images:[{"url":"3/0/6/0/30609211/day1-screenshot3.png","width":"1039","height":"602","caption":"Day 1 participant group photo"},{"url":"3/0/6/0/30609211/day1-techtalk-apical-scientific.png","width":"1431","height":"695","caption":"Day 1 Technical Talk by Dr Ahmad Kamal"},{"url":"3/0/6/0/30609211/day1-screenshot1.png","width":"1039","height":"603","caption":"Day 1 participant group photo"},{"url":"3/0/6/0/30609211/day1-trainer.png","width":"1345","height":"716","caption":"Day 1 Lecture"},{"url":"3/0/6/0/30609211/day2-screenshot1.png","width":"1093","height":"635","caption":"Day 2 participant group photo"},{"url":"3/0/6/0/30609211/day2-technical-talk-bio3.png","width":"1380","height":"616","caption":"Day 2 Technical Talk by Dr Joel Ma"},{"url":"3/0/6/0/30609211/day2-technical-talk2-bio3.png","width":"1386","height":"789","caption":"Day 2 Technical Talk with Dr Joel Ma &amp; Ms. Ng Lin Eng from Azenta Singapore"},{"url":"3/0/6/0/30609211/day3-trainer2.png","width":"1386","height":"794","caption":"Day 2 practical"},{"url":"3/0/6/0/30609211/day3-screenshot1.png","width":"1363","height":"640","caption":"Day 3 participant group photo"},{"url":"3/0/6/0/30609211/day3-technical-talk-neoscience.png","width":"1354","height":"651","caption":"Day 3 Technical Talk by Dr Chrystine Yan"},{"url":"3/0/6/0/30609211/day3-trainer.png","width":"1363","height":"794","caption":"Day 3 practical"}]}) }
+jQuery(document).ready(init);
+})(window.jQuery)
+</script>
+
+<div style="height:20px;overflow:hidden"></div></div>
+
+<div class="wsite-spacer" style="height:95px;"></div>
+
+<h2 class="wsite-content-title" style="text-align:center;"><font color="#5040ae" style=""><font size="6">Advanced Transcriptomics: </font></font><font color="#8640ae" style="font-size: xx-large;">Concept &amp; Practice</font><br /><font color="#5040ae" style="font-size: xx-large;">&#8203;</font></h2>
+
+<div class="paragraph" style="text-align:center;"><font color="#2a2a2a"><font size="5">"A<strong style=""> simple </strong>&amp;<strong style=""> easy</strong> approach to<strong style=""> downstream RNA-seq analysis </strong>for<strong style=""> publication"</strong></font><br /><font size="4">&#8203;</font></font></div>
+
+<div class="paragraph"><font color="#2a2a2a"><font size="4">This <strong>workshop</strong> will <strong>focus</strong> on topics ranging from <strong>basic experimental design</strong> to <strong>advanced downstream analyses</strong> of<strong> RNA-seq</strong> data as well as <strong>tips to publish in high-impact journals</strong>.</font><br /><br /><strong>Hands-on training </strong>from RNA-seq <strong>data</strong> to <strong>publication</strong><strong> figures / tables</strong> without&nbsp;UNIX / Python / R scripts.<br />&#8203;<br />Upon the completion of this&nbsp;<strong>3-day online workshop</strong>, participants will be capable of the following:</font><ul><li><font color="#2a2a2a"><strong>Conceptualising</strong> a transcriptome experiment with different considerations</font></li><li><font color="#2a2a2a"><strong>Understanding </strong>a complete workflow of RNA-seq data acquisition, processing, assembly, functional annotation, analysis, and interpretation</font></li><li><font color="#2a2a2a"><strong>Aware</strong> of the different analysis workflows and software packages in RNA-seq analysis</font></li><li><font color="#2a2a2a"><strong>Competent</strong> in&nbsp;submitting RNA-seq related<strong> files </strong>to the <strong>NCBI </strong>public <strong>repository</strong></font><br /></li><li><font color="#2a2a2a"><strong>Exposure</strong> to different approaches for <strong>integrating </strong>transcriptomics with <strong>other omics</strong> towards <strong>systems understanding</strong></font></li><li><font color="#2a2a2a"><strong>Network opportunity&nbsp;</strong>with other researchers in the field &amp; <strong>sharing of knowledge </strong>via voluntary<strong> flash talks</strong></font></li><li><font color="#2a2a2a">Hands-on in <strong><em>de novo</em> transcriptomic analysis </strong>and <strong>mining </strong>RNA-seq data</font></li><li><font color="#2a2a2a">Hands-on in downstream<strong> functional analyses</strong>: WEGO, KEGG pathway, clustering, functional enrichment</font></li></ul></div>
+
+<div class="wsite-spacer" style="height:14px;"></div>
+
+<h2 class="wsite-content-title"><font color="#dab844">Workshop Highlights</font></h2>
+
+<div class="paragraph"><ol><li><font color="#2a2a2a"><strong>Principles </strong>of transcriptomics</font></li><li><font color="#2a2a2a">Experimental <strong>design</strong> &amp; <strong>considerations</strong></font></li><li><font color="#2a2a2a">Complete <strong>workflow </strong>of transcriptomic analysis</font></li><li><font color="#2a2a2a">Functional <strong>annotation</strong> &amp; <strong>enrichment </strong>analysis</font></li><li><font color="#2a2a2a"><strong>Biologist-friendly</strong> approach to <strong>downstream analyses </strong>using MS Excel &amp; <a href="https://maxquant.net/perseus/" target="_blank">Perseus</a></font></li><li><font color="#2a2a2a"><strong>Data submission</strong> to NCBI public <strong>repository</strong></font></li><li><span style="color:rgb(42, 42, 42)"><strong>Tips</strong> for <strong>publishing</strong> transcriptomics <strong>journal article</strong></span></li><li><font color="#2a2a2a"><strong>Workshop&nbsp;materials </strong>&amp; <strong>video recordings</strong> will be available for access after the workshop</font></li><li><strong><font color="#2a2a2a">Global participants</font></strong></li><li><strong><font color="#2a2a2a">&#8203;Certificate of participation</font></strong><br /></li></ol></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<h2 class="wsite-content-title">Why should YOU&nbsp;attend?</h2>
+
+<div class="paragraph"><ul><li><font color="#2a2a2a">You're a&nbsp;<strong>researcher, academician</strong>, or <strong>student&nbsp;</strong>interested in transcriptomics and its applications.</font></li><li><font color="#2a2a2a">You're interested in<strong> advanced&nbsp;skills</strong> in RNA-seq analysis.</font></li><li><font color="#2a2a2a">You want <strong>user-friendly platforms</strong> for the interpretation of RNA-seq data.</font></li><li><font color="#2a2a2a">You got the transcriptome <strong>results</strong> from the sequencing vendor&nbsp;but not sure how to <strong>interpret</strong> them.</font></li><li><font color="#2a2a2a">You wish to <strong>analyse</strong> the transcriptome data <strong>hands-on</strong>,&nbsp;especially as a biologist instead of&nbsp;a data scientist.</font></li><li><font color="#2a2a2a">You want to learn on how to mine for <strong>biological knowledge</strong> from transcriptome data <strong>without programming/coding</strong>.</font></li><li><font color="#2a2a2a">You work on a transcriptomic project and want to learn on how to<strong> publish </strong>your results as a <strong>high-impact </strong>journal article.</font></li></ul><br /><font color="#2a2a2a">&#8203;This workshop is opened to<strong> local </strong>&amp;<strong> international</strong> participants, from <strong>beginner </strong>to <strong>advanced researchers</strong> in <strong>molecular biology</strong> /&nbsp;<strong>omics</strong>. The<strong> content</strong> of this workshop is<strong> transferable</strong> to other omics studies such as <strong>proteomics</strong>.</font></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="wsite-spacer" style="height:19px;"></div>
+
+<div class="paragraph" style="text-align:center;"><font color="#8d5024"><font size="5">Fee:</font><strong><font size="5"> only MYR300 </font></strong><font size="5">(local)</font><strong><font size="5"> / </font></strong></font><em><font size="5"><font color="#8d5024"><strong>USD80</strong> (for international participants)</font><br /><strong style="color:rgb(218, 68, 68)">&#8203;Group registration (3 pax): RM800 (local) / USD200 (international)<br />&#8203;</strong></font></em><strong style="color:rgb(218, 68, 68)"><font size="4">Deadline: 4 July 2022 12pm GMT+8 with full payment/PO</font></strong><em><font size="5"></font></em><br /><font size="5"><font color="#da8044">Venue:</font></font><strong><font size="5"><font color="#da8044"> Online</font></font></strong><br /><font size="5"><font color="#6cb83a">Duration:</font></font><strong><font size="5"><font color="#6cb83a"> 5-7 July 2022 </font></font></strong><font size="5"><font color="#6cb83a">(0900-1700 GMT+8)</font></font><br /><font color="#3ab890" size="5">Trainer: </font><strong><font color="#3ab890" size="5">Assoc. Prof. Dr. Hoe-Han Goh</font></strong></div>
+
+<h2 class="wsite-content-title" style="text-align:center;">Tentative Programme</h2>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/0/6/0/30609211/program_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/0/6/0/30609211/published/program.png?1655702041" alt="Picture" style="width:683;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="paragraph" style="text-align:center;"><font color="#2a2a2a">Programme is subjected to change.</font></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-small wsite-button-highlight" href="uploads/3/0/6/0/30609211/flyer_2022.pdf" target="_blank">
+<span class="wsite-button-inner">Workshop Flyer</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+<h2 class="wsite-content-title"><font size="4">Requirements</font></h2>
+
+<div class="paragraph" style="text-align:justify;"><font color="#2a2a2a">For this online workshop, please download and install&nbsp;<strong><a href="https://www.webex.com/downloads.html" target="_blank">Webex</a></strong>&nbsp;for the online sessions. You won't need a computer with very high specifications. <strong>Minimum requirements</strong>: Windows OS (ideally <strong>64-bit&nbsp;</strong><strong>Windows 10</strong> and above) with minimum<strong> 2 GB RAM</strong> and&nbsp;<strong>10 GB hard disk storage&nbsp;</strong>to run <strong><a href="https://www.microsoft.com/en-us/education/products/office" target="_blank">MS Excel</a></strong>&nbsp;(2016 and above) and <strong><a href="http://www.coxdocs.org/doku.php?id=perseus:common:download_and_installation" target="_blank">Perseus </a></strong>software for day 2 and day 3 practicals, respectively.&nbsp;For <strong>Mac </strong>users, please run Windows via&nbsp;Parallels or Bootcamp etc.&nbsp;<br />&#8203;<br />We will be using <strong>Perseus v1.6.7</strong>. Installers can be downloaded&nbsp;<strong><a href="https://drive.google.com/drive/u/1/folders/1qj5Crivqob4AWvHWfFrvr2_-Z8kb7aB5" target="_blank">here</a></strong>. You just need to unzip the Perseus folder.<br /><br />It's recommended that you <strong>use two devices</strong> (e.g., desktop/smartphone + laptop) or <strong>dual monitor setup</strong> to allow easy following of <strong>online demos</strong> during <strong>practicals</strong>.<br /><br /><strong><font size="3">For hands-on practicals, make sure that all software (Excel &amp; Perseus) can run on your laptop before the workshop.&nbsp;</font></strong>Due to time constraint we don't have the time to individually troubleshoot software installation. As a&nbsp;<strong>pre-workshop training</strong>, you can try out this <strong><a href="uploads/3/0/6/0/30609211/perseus-tutorial.pdf" target="_blank">tutorial</a></strong> with&nbsp;the demo&nbsp;<a href="https://drive.google.com/drive/u/1/folders/1ych4BS14820nAaK6k9-IwCLITkjb9ZEk" target="_blank"><span style="font-weight:bolder">dataset</span></a>&nbsp;to get familiar with Perseus basic functions. You can refer to Perseus<strong> demo videos</strong> <a href="https://youtu.be/xtOAHCfbLzc" target="_blank">Part 1</a> &amp; <a href="https://youtu.be/1Id5xaY9FBY" target="_blank">Part 2</a>.<br /><br /><strong><font size="3">Don't worry if your laptop cannot run Perseus, you can still learn a lot from this workshop on transcriptomics, different technologies, analysis workflow, applications, data interpretation, and visualisation.</font></strong><br /><br />&#8203;You can&nbsp;<strong><a href="mailto:gohhh@ukm.edu.my">email</a>&nbsp;</strong>me if facing any difficulty, I will try my best to help.&nbsp;</font></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<h2 class="wsite-content-title" style="text-align:center;"><a href="https://www.ukm.my/inbiosis/en/inbiosis-workshop-series-2022-advanced-transcriptomics/" target="_blank">Further details</a></h2>
+
+<div class="paragraph" style="text-align:center;"><font color="#2a2a2a"><a href="mailto:inbiosis.workshop@gmail.com">inbiosis.workshop@gmail.com</a><br />+603 8921 4557/4558/4549<br />&#8203;</font></div>
+
+<div style="text-align:center;"><div style="height: 10px; overflow: hidden;"></div>
+<a class="wsite-button wsite-button-large wsite-button-normal" href="https://bit.ly/inbiosisworkshopseries2022" target="_blank">
+<span class="wsite-button-inner">Register now</span>
+</a>
+<div style="height: 10px; overflow: hidden;"></div></div>
+
+<div class="paragraph" style="text-align:center;"><font color="#2a2a2a" size="4">*Limited seat.&nbsp;Priority will be given to those who made payment before <strong>30th Jun 2022.<br />All participants will receive an e-certificate of participation.</strong></font></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='uploads/3/0/6/0/30609211/cert_orig.png' rel='lightbox' onclick='if (!lightboxLoaded) return false'>
+<img src="uploads/3/0/6/0/30609211/published/cert.png?1651113866" alt="Picture" style="width:311;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph" style="text-align:center;"><strong><font color="#2a2a2a" size="5">Organised by</font></strong></div>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='https://www.ukm.my/inbiosis/en/' target='_blank'>
+<img src="uploads/3/0/6/0/30609211/editor/inbios.png?1647327562" alt="Picture" style="width:221;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:50%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='https://www.ukm.my/inbiosis/en/coda/' target='_blank'>
+<img src="uploads/3/0/6/0/30609211/editor/coda.png?1647327537" alt="Picture" style="width:249;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<h2 class="wsite-content-title">Sponsors</h2>
+
+<h2 class="wsite-content-title" style="text-align:center;"><font size="4">TEchnical TalkS</font></h2>
+
+<div><div class="wsite-multicol"><div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+	<table class="wsite-multicol-table">
+		<tbody class="wsite-multicol-tbody">
+			<tr class="wsite-multicol-tr">
+				<td class="wsite-multicol-col" style="width:33.333333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:0px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='https://apicalscientific.com/' target='_blank'>
+<img src="uploads/3/0/6/0/30609211/published/apical.png?1655791715" alt="Picture" style="width:186;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:0px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/_4WmiH4Tt8c?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:33.333333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:20px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='https://www.bio3.my/' target='_blank'>
+<img src="uploads/3/0/6/0/30609211/published/bio3.png?1655703536" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/hZqOWC9Dkio?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>				<td class="wsite-multicol-col" style="width:33.333333333333%; padding:0 15px;">
+					
+						
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:20px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='https://www.neoscience.com.my/' target='_blank'>
+<img src="uploads/3/0/6/0/30609211/published/neoscience.png?1650593090" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-auto wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/NrSygkZ8peA?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+
+					
+				</td>			</tr>
+		</tbody>
+	</table>
+</div></div></div>
+
+<h2 class="wsite-content-title" style="text-align:center;"><font size="3">Advertisement</font></h2>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='https://www.mdgsb.com.my/' target='_blank'>
+<img src="uploads/3/0/6/0/30609211/editor/medigene.png?1653625773" alt="Picture" style="width:154;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div class="wsite-youtube" style="margin-bottom:10px;margin-top:10px;"><div class="wsite-youtube-wrapper wsite-youtube-size-small wsite-youtube-align-center">
+<div class="wsite-youtube-container">
+
+<iframe src="http://www.youtube.com/embed/HJK_biwXgvk?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+</div>
+</div></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph" style="text-align:center;"><strong><font color="#2a2a2a">Want to promote your company services? We value your supports in all forms. Please <a href="mailto:gohhh@ukm.edu.my">get in touch</a>!</font></strong></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+<a href='mailto:gohhh@ukm.edu.my'>
+<img src="uploads/3/0/6/0/30609211/sponsor_orig.jpg" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<h2 class="wsite-content-title">Trainer's credentials</h2>
+
+<div class="paragraph"><ul><li><font color="#2a2a2a">An <strong>experienced instructor</strong> (&gt;10 years) supported by <strong>competent team</strong> members that <strong>successful</strong>ly&nbsp;organised various&nbsp;omics workshops,&nbsp;seminars &amp; conferences.</font></li><li><font color="#2a2a2a">Good track record of transcriptomics <strong>publications</strong> in<strong> reputable</strong> journals as a <strong>corresponding </strong>author.</font></li><li><font color="#2a2a2a">The inclusion of <strong>technical talks</strong> from <strong>principals / specialists </strong>of companies offering NGS services enhances the workshop<strong> content</strong>.</font></li><li><font color="#2a2a2a"><strong>Interactive flash talks </strong>during the workshop provide opportunity for participant </font><strong><span style="color:rgb(42, 42, 42)">networking&nbsp;</span></strong><font color="#2a2a2a">&amp; to obtain <strong>feedbacks</strong>.</font></li></ul></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><strong><font color="#2a2a2a" size="5">Previous workshops</font></strong><br /><ol><li><font color="#2a2a2a">Virtual RT-qPCR Analysis Workshop&nbsp;(organiser) 19 Oct 2020</font></li><li><font color="#2a2a2a"><a href="https://mymapsociety.weebly.com/workshop-2019.html" target="_blank">MAPS Workshop 2019: Proteomics Data Analysis</a>&nbsp;<a href="http://www.inbiosis.ukm.my/v2/gallery/proteomics-workshop-2018/" target="_blank">&nbsp;</a>(organiser)&nbsp;23 Aug 2019</font></li><li><font color="#2a2a2a"><a href="https://photos.google.com/share/AF1QipP6Iu1ZhN0FsykWDBrAOHFOWJCiRTWnp9Rx2h3CukLQVYuw1dtZr-CR53iz8tREKw?key=VzNyazZaRFVhNHR3T0Q5Z1J2T2Vwb1kxWFNPQkZn&amp;pli=1" target="_blank">Shotgun Proteomics Advanced Data Analysis Workshop&nbsp;</a>(organiser)&nbsp;27-29 Nov 2018</font></li><li><font color="#2a2a2a"><a href="https://photos.google.com/share/AF1QipPO4fJyXMvOxqjHWeAmybRmXoRXOGc9SCBvog4UazW_C9XY11z3SdDnK8MPd8q_yQ?key=RTNFX3drTEVTdnJEcmZlbGJaT1BzNmd6RVBYZVNR" target="_blank">Transcriptomics Workshop</a>&nbsp;(organiser)&nbsp;10-12 Apr 2018</font></li><li><font color="#2a2a2a"><a href="https://photos.app.goo.gl/vB6Pd72mrX16opKj9" target="_blank">qPCR Workshop</a>&nbsp;(organiser)&nbsp;21 Mar 2018</font></li><li><font color="#2a2a2a"><a href="https://photos.app.goo.gl/Vr9GtmzKpKX9pNyaA" target="_blank">Scientific Workshop on qPCR&nbsp;</a>(organiser)&nbsp;4 Apr 2017</font></li><li><font color="#2a2a2a"><a href="https://photos.google.com/share/AF1QipN2jsc4zSKG9yK61cCZ_2sF77jXEr5bZvCmcX-_SEVmeMD1HpFlBVoYIEAIFwJopQ?key=VF9DUVdSZDdCUkR0SHZJNWQ5amRNWFAxWFM2SHdn" target="_blank">Transcriptomics Workshop</a>&nbsp;(organiser)&nbsp;26-27 May 2015</font>&#8203;</li></ol></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div class="paragraph"><strong><font color="#2a2a2a">Feedbacks from the previous workshops</font></strong><ul><li><em><font color="#2a2a2a">Good tips in running data analysis</font></em></li><li><em><font color="#2a2a2a">Topics covered are more than expected. Good.</font></em></li></ul><ul><li><em><font color="#2a2a2a">Useful lecture notes, Virtual machine, software</font></em></li><li><font color="#2a2a2a"><em>Enjoyed transcriptomic data analysis part which will be used in my future study</em></font></li><li><em><font color="#2a2a2a">Useful info on the availability of various tools for downstream processing of bulk RNA-seq</font></em></li><li><em><font color="#2a2a2a">Enjoyed Unix command, learning to read and write the Unix command for trinity and Trinotate</font></em></li><li><em><font color="#2a2a2a">The exposure to various bioinformatic tools and their vast applications in transcriptomics is useful</font></em></li></ul><em><font color="#2a2a2a"><br /><strong><font size="5">Overall satisfaction: 4.65/5</font></strong></font></em><br /></div>
+
+<div><div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center">
+<a>
+<img src="uploads/3/0/6/0/30609211/coverrna22_orig.png" alt="Picture" style="width:auto;max-width:100%" />
+</a>
+<div style="display:block;font-size:90%"></div>
+</div></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:center;"><strong><font color="#2a2a2a" size="6"><br />&#8203;Follow us</font><br /><font size="5"><font color="#3a96b8"><a href="https://twitter.com/gohlab" target="_blank">Twitter</a>&nbsp;</font> <font color="#248d6c"><a href="https://www.facebook.com/groups/738234276223336" target="_blank">Facebook</a></font></font></strong></div>
+
+<div class="wsite-spacer" style="height:50px;"></div>
+
+<div><div style="height: 20px; overflow: hidden; width: 100%;"></div>
+<hr class="styled-hr" style="width:100%;"></hr>
+<div style="height: 20px; overflow: hidden; width: 100%;"></div></div>
+
+<div class="paragraph" style="text-align:center;"><strong></strong><span style="color:rgb(42, 42, 42)">Copyright &copy; 2022&nbsp;</span><a href="http://www.ukm.my/" target="_blank">UKM</a><strong></strong></div>
+</div>
+
+        </div><!-- end container -->
+    </div><!-- end main-wrap -->
+
+    <div id="footer-wrap">
+        <div class="container">
+       		Create a <a target="_top" href="http:///">free web site</a> with <a target="_top" href="http:///" title="free web site">Weebly</a>
+        </div><!-- end container -->
+    </div><!-- end footer-wrap -->
+	
+<script type="text/javascript" src="files/theme/custom.js"></script>
+    <div id="customer-accounts-app"></div>
+    <script src="http://cdn11.editmysite.com/js/site/main-customer-accounts-site.js?buildtime=1234"></script>
+
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3WRRH2KF9E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3WRRH2KF9E');
+</script>
+	</body>
+</html>
